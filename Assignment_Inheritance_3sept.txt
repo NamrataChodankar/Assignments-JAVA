@@ -4,7 +4,7 @@ Identify Entities and sub entities ,their attributes and methods in Student Mana
 ----------------------------------------Student management system-------------------------------------------------------------------
 					
 1.Entity-User			
-Attributes-userId,userPassword,name{firstName,lastName}[sub-entities],address,phoneNo{landline,cell}[sub-entities] 		
+Attributes-userId,userPassword,name{firstName,lastName}[sub-attributes],address,phoneNo{landline,cell}[sub-attributes] 		
 Methods- getUserId,getUserPassword,getName{getFirstName,getLastName},getAddress,getPhoneNo{getlandline,getCell},setUserId,setUserPassword,
 setName{setFirstName,setLastName},setAddress,setPhoneNo{setlandline,setCell}
 
