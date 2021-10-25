@@ -1,0 +1,39 @@
+1. Display department_id's of all departments which have number of employees greater than 5.
+-----------------------------------------------
+select department_id,count(employee_id) 
+from employees
+where department_id in 
+(select department_id
+from employees
+group by department_id
+having count(*)>5)
+group by department_id;
+
+
+2. display department ids whose employees salary average is greater than 20000
+-------------------------------------------------
+select department_id,avg(salary)
+from employees
+group by department_id
+having avg(salary)>20000;
+
+
+3. Display details of  5 employees who are earning highest salary
+------------------------------------------
+select employee_id, first_name,salary 
+from employees 
+group by salary
+order by salary desc limit 0,5;
+
+
+4. Retrieve department name,city,country name and region name to which employees belong to.
+----------------------------------------------------------
+select country_name,city, department_name,region_name
+from countries 
+join locations USING (country_id) 
+join departments USING (location_id)
+join regions using (region_id);
+
+
+
+
